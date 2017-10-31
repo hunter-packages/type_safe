@@ -2,7 +2,9 @@
 # This file is subject to the license terms in the LICENSE file
 # found in the top-level directory of this distribution.
 
-find_package(debug_assert QUIET)
+# a noop if HUNTER_ENABLED=NO
+hunter_add_package(debug_assert)
+find_package(debug_assert CONFIG QUIET)
 if(debug_assert_FOUND)
     set(TYPE_SAFE_HAS_IMPORTED_TARGETS ON)
 else()
