@@ -4,7 +4,7 @@
 
 #include <type_safe/tagged_union.hpp>
 
-#include <catch.hpp>
+#include <catch/catch.hpp>
 
 #include "debugger_type.hpp"
 

@@ -4,7 +4,7 @@
 
 #include <type_safe/bounded_type.hpp>
 
-#include <catch.hpp>
+#include <catch/catch.hpp>
 
 #include <type_safe/integer.hpp>
 

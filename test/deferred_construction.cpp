@@ -4,7 +4,7 @@
 
 #include <type_safe/deferred_construction.hpp>
 
-#include <catch.hpp>
+#include <catch/catch.hpp>
 #include <string>
 
 using namespace type_safe;

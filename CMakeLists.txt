@@ -7,8 +7,8 @@ cmake_minimum_required(VERSION 3.1)
 include(cmake/HunterGate.cmake)
 option(HUNTER_ENABLED "Enable Hunter package manager" NO)
 HunterGate(
-  URL "https://github.com/ruslo/hunter/archive/v0.19.142.tar.gz"
-  SHA1 "3c5ca71635f40a619e17ff96584aa22342224a05"
+  URL "https://github.com/ruslo/hunter/archive/v0.23.6.tar.gz"
+  SHA1 "951e8daf57a51708b0e6a00cab342a042db57a2f"
 )
 
 project(TYPE_SAFE)

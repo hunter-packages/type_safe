@@ -2,21 +2,8 @@
 # This file is subject to the license terms in the LICENSE file
 # found in the top-level directory of this distribution.
 
-if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/catch.hpp)
-    file(DOWNLOAD
-         https://raw.githubusercontent.com/philsquared/Catch/master/single_include/catch.hpp
-         ${CMAKE_CURRENT_BINARY_DIR}/catch.hpp
-         STATUS status
-         LOG log)
-
-    list(GET status 0 status_code)
-    list(GET status 1 status_string)
-
-    if(NOT status_code EQUAL 0)
-        message(FATAL_ERROR "error downloading catch: ${status_string}"
-                "${log}")
-    endif()
-endif()
+hunter_add_package(Catch)
+find_package(Catch2 CONFIG REQUIRED)
 
 set(source_files test.cpp
                  arithmetic_policy.cpp
@@ -42,7 +29,7 @@ set(source_files test.cpp
                  variant.cpp
                  visitor.cpp)
 add_executable(type_safe_test debugger_type.hpp ${source_files})
-target_link_libraries(type_safe_test PUBLIC type_safe)
+target_link_libraries(type_safe_test PUBLIC type_safe Catch2::Catch)
 target_include_directories(type_safe_test PUBLIC ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 set_property(TARGET type_safe_test PROPERTY CXX_STANDARD 14) # some tests require 14
 

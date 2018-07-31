@@ -4,7 +4,7 @@
 
 #include <type_safe/boolean.hpp>
 
-#include <catch.hpp>
+#include <catch/catch.hpp>
 
 #include <sstream>
 

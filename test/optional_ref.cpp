@@ -4,7 +4,7 @@
 
 #include <type_safe/optional_ref.hpp>
 
-#include <catch.hpp>
+#include <catch/catch.hpp>
 
 #include "debugger_type.hpp"
 

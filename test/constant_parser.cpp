@@ -4,7 +4,7 @@
 
 #include <type_safe/detail/constant_parser.hpp>
 
-#include <catch.hpp>
+#include <catch/catch.hpp>
 
 using namespace type_safe;
 
