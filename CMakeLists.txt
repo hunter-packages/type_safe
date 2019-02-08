@@ -3,6 +3,10 @@
 # found in the top-level directory of this distribution.
 
 cmake_minimum_required(VERSION 3.1)
+if(POLICY CMP0076)
+    cmake_policy(SET CMP0076 NEW)
+endif()
+
 
 include(cmake/HunterGate.cmake)
 option(HUNTER_ENABLED "Enable Hunter package manager" NO)
