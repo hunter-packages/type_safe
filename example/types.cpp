@@ -1,4 +1,4 @@
-// Copyright (C) 2016-2018 Jonathan Müller <jonathanmueller.dev@gmail.com>
+// Copyright (C) 2016-2019 Jonathan Müller <jonathanmueller.dev@gmail.com>
 // This file is subject to the license terms in the LICENSE file
 // found in the top-level directory of this distribution.
 
@@ -10,7 +10,8 @@
 namespace ts = type_safe;
 
 // ts::unsigned_t is alias for ts::integer<unsigned>
-// function is type safe - only unsigned integer types smaller than unsigned can be passed to the function
+// function is type safe - only unsigned integer types smaller than unsigned can be passed to the
+// function
 void only_unsigned(ts::unsigned_t val)
 {
     std::cout << "only_unsigned() got: " << val << '\n';
@@ -85,7 +86,7 @@ int main()
     //    ts::double_t d2;      // error: no default constructor
     ts::double_t d3(0.f); // okay: float -> double is allowed
 
-    std::cout << "floating point value: " << f1 << ' ' << d1 << '\n';
+    std::cout << "floating point value: " << f1 << ' ' << d1 << ' ' << d3 << '\n';
 
     //    f1++;      // error: no in/decrement for floats
     //    f1 == 0.f; // error: no equality comparison for floats

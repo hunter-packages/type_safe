@@ -1,4 +1,4 @@
-// Copyright (C) 2016-2018 Jonathan Müller <jonathanmueller.dev@gmail.com>
+// Copyright (C) 2016-2019 Jonathan Müller <jonathanmueller.dev@gmail.com>
 // This file is subject to the license terms in the LICENSE file
 // found in the top-level directory of this distribution.
 
@@ -41,11 +41,12 @@ void use_handle(handle h)
 }
 
 // integer representing a distance
-struct distance : ts::strong_typedef<distance, unsigned>,               // required
-                  ts::strong_typedef_op::equality_comparison<distance>, // for operator==/operator!=
-                  ts::strong_typedef_op::relational_comparison<distance>, // for operator< etc.
-                  ts::strong_typedef_op::integer_arithmetic<
-                      distance> // all arithmetic operators that make sense for integers
+struct distance
+: ts::strong_typedef<distance, unsigned>,                 // required
+  ts::strong_typedef_op::equality_comparison<distance>,   // for operator==/operator!=
+  ts::strong_typedef_op::relational_comparison<distance>, // for operator< etc.
+  ts::strong_typedef_op::integer_arithmetic<distance> // all arithmetic operators that make sense
+                                                      // for integers
 {
     using strong_typedef::strong_typedef;
 };
@@ -58,11 +59,10 @@ std::ostream& operator<<(std::ostream& out, const distance& d)
 
 namespace std
 {
-    // we want to use it with the std::unordered_* containers
-    template <>
-    struct hash<::distance> : type_safe::hashable<::distance>
-    {
-    };
+// we want to use it with the std::unordered_* containers
+template <>
+struct hash<::distance> : type_safe::hashable<::distance>
+{};
 
 } // namespace std
 

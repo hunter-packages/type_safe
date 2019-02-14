@@ -1,4 +1,4 @@
-// Copyright (C) 2016-2018 Jonathan Müller <jonathanmueller.dev@gmail.com>
+// Copyright (C) 2016-2019 Jonathan Müller <jonathanmueller.dev@gmail.com>
 // This file is subject to the license terms in the LICENSE file
 // found in the top-level directory of this distribution.
 
@@ -169,8 +169,8 @@ TEST_CASE("throwing_verifier")
     REQUIRE_NOTHROW((a = &dummy2, true));
     REQUIRE_THROWS_AS(a = static_cast<int*>(nullptr), constrain_error);
 
-    constrained_type<int*, constraints::non_null, throwing_verifier> b =
-        sanitize(&dummy2, constraints::non_null{});
+    constrained_type<int*, constraints::non_null, throwing_verifier> b
+        = sanitize(&dummy2, constraints::non_null{});
     REQUIRE_NOTHROW((b = &dummy2, true));
     REQUIRE_THROWS_AS(b = static_cast<int*>(nullptr), constrain_error);
 }

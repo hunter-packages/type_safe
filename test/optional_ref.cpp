@@ -1,4 +1,4 @@
-// Copyright (C) 2016-2018 Jonathan Müller <jonathanmueller.dev@gmail.com>
+// Copyright (C) 2016-2019 Jonathan Müller <jonathanmueller.dev@gmail.com>
 // This file is subject to the license terms in the LICENSE file
 // found in the top-level directory of this distribution.
 
@@ -21,11 +21,9 @@ TEST_CASE("optional_ref")
 {
     // only test stuff special for optional_ref
     struct base
-    {
-    };
+    {};
     struct derived : base
-    {
-    };
+    {};
 
     test_optional_ref_conversion<int, int&&>(std::false_type{});
     test_optional_ref_conversion<int, const int&>(std::false_type{});
