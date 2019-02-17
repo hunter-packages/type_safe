@@ -4,7 +4,7 @@
 
 #include <type_safe/constrained_type.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 using namespace type_safe;
 

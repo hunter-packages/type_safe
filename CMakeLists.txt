@@ -14,8 +14,8 @@ endif()
 include(cmake/HunterGate.cmake)
 option(HUNTER_ENABLED "Enable Hunter package manager" NO)
 HunterGate(
-  URL "https://github.com/ruslo/hunter/archive/v0.23.6.tar.gz"
-  SHA1 "951e8daf57a51708b0e6a00cab342a042db57a2f"
+    URL "https://github.com/ruslo/hunter/archive/v0.23.104.tar.gz"
+    SHA1 "92f60c3474c6d8749320f1b9ce4218a648493de3"
 )
 
 project(TYPE_SAFE)

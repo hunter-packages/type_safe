@@ -4,7 +4,7 @@
 
 #include <type_safe/floating_point.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 #include <sstream>
 
