@@ -5,7 +5,7 @@
 #include <type_safe/optional.hpp>
 #include <type_safe/visitor.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 #include "debugger_type.hpp"
 

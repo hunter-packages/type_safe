@@ -4,7 +4,7 @@
 
 #include <type_safe/strong_typedef.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 #include <sstream>
 

@@ -4,7 +4,7 @@
 
 #include <type_safe/downcast.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 using namespace type_safe;
 

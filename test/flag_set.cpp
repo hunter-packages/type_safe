@@ -4,7 +4,7 @@
 
 #include <type_safe/flag_set.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 // no using namespace to test operator namespace
 

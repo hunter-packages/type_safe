@@ -29,7 +29,7 @@ set(source_files test.cpp
                  variant.cpp
                  visitor.cpp)
 add_executable(type_safe_test debugger_type.hpp ${source_files})
-target_link_libraries(type_safe_test PUBLIC type_safe Catch2::Catch)
+target_link_libraries(type_safe_test PUBLIC type_safe Catch2::Catch2)
 target_include_directories(type_safe_test PUBLIC ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 set_property(TARGET type_safe_test PROPERTY CXX_STANDARD 14) # some tests require 14
 
