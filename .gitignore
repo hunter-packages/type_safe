@@ -1,2 +1,4 @@
 # ignore conan.io package test buildtree
 test_package/build
+# ignore Visual Studio files
+.vs

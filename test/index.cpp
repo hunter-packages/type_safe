@@ -4,7 +4,7 @@
 
 #include <type_safe/index.hpp>
 
-#include <catch/catch.hpp>
+#include <catch2/catch.hpp>
 
 using namespace type_safe;
 
